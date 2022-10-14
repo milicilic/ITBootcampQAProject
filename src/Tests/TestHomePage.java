@@ -218,8 +218,9 @@ public class TestHomePage {
    public void searchProducts(){
         homePage.goOnProductsPage();
         productPage.search("top");
-     int x= productPage.vratiListuElemenata().size();
-       System.out.println(x);
+       JavascriptExecutor javascriptExecutor = (JavascriptExecutor) webDriver;
+       javascriptExecutor.executeScript("window.scrollBy(0,500)", "");
+        Assert.assertTrue(productPage.nameOfProduct().contains("top"));
 
    }
 

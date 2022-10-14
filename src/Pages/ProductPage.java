@@ -15,7 +15,8 @@ public class ProductPage {
     WebElement searchBar;
     @FindBy(xpath = "/html[1]/body[1]/section[1]/div[1]/button[1]")
     WebElement searchButton;
-
+    @FindBy(xpath = "/html[1]/body[1]/section[2]/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[1]/p[1]")
+    WebElement productName;
     public ProductPage(WebDriver webDriver) {
         this.webDriver = webDriver;
         PageFactory.initElements(this.webDriver, this);
@@ -30,6 +31,10 @@ public class ProductPage {
         return webDriver.findElements(By.xpath("/html[1]/body[1]/section[2]/div[1]/div[1]/div[2]/div[1]/"));
 
     }
+    public String nameOfProduct(){
+        return productName.getText().toLowerCase();
+    }
+
 
 
 }
