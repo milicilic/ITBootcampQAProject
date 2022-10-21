@@ -158,7 +158,7 @@ public class TestHomePage {
         addItemInCart();
         cartPage.removeItemFromCart();
        WebElement product=webDriver.findElement(By.xpath("/html[1]/body[1]/section[1]/div[1]/div[2]/table[1]"));
-       Assert.assertFalse(product.getCssValue("style").equals("display: none;"));
+       Assert.assertFalse(product.getCssValue("display").equals("none"));
       //proveriti ovo sa Markom
    }
    @Test
