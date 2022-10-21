@@ -66,15 +66,16 @@ public class TestHomePage {
     public void backToHomePage(){
         homePage.goOnProductsPage();
         homePage.clickOnHomePageIcon();
-
+        Assert.assertEquals(webDriver.getCurrentUrl(),"https://www.automationexercise.com/");
         homePage.goOnCartPage();
         homePage.clickOnHomePageIcon();
-
+        Assert.assertEquals(webDriver.getCurrentUrl(),"https://www.automationexercise.com/");
         homePage.goOnContactUsPage();
         homePage.clickOnHomePageIcon();
-
+        Assert.assertEquals(webDriver.getCurrentUrl(),"https://www.automationexercise.com/");
         homePage.goOnLogIn_SignUpPage();
         homePage.clickOnHomePageIcon();
+        Assert.assertEquals(webDriver.getCurrentUrl(),"https://www.automationexercise.com/");
     }
 
     @Test
